@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Klasická logická hra 15 Puzzle. Poskladaj čísla od 1 do 15 v správnom poradí.">
+  <title>15 Puzzle | Kodicka</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <main class="page">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Kodicka – úvod">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>kodicka</span>
+      </a>
+      <span class="header-note">MALÁ HRA PRE VEĽKÚ HLAVU</span>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> LOGICKÁ VÝZVA</p>
+      <h1 id="page-title">15 <span>Puzzle</span></h1>
+      <p class="intro-copy">Jeden voľný priestor. Pätnásť čísel. Dokážeš ich zoradiť?</p>
+    </section>
+
+    <section class="game-layout" aria-label="Hra 15 Puzzle">
+      <div class="board-panel">
+        <div class="panel-topline">
+          <span class="panel-label">HRACIA PLOCHA</span>
+          <span class="board-size">4 × 4</span>
+        </div>
+        <div id="board" class="board" role="group" aria-label="Hracia plocha s číslami od 1 do 15">
+          <p class="loading">Pripravujem hru…</p>
+        </div>
+        <p class="board-hint"><span aria-hidden="true">↔</span> Posúvaj susedné čísla do voľného políčka.</p>
+      </div>
+
+      <aside class="side-panel" aria-label="Ovládanie a štatistiky">
+        <div class="stats">
+          <div class="stat-card">
+            <span class="stat-label">ŤAHY</span>
+            <strong id="moves" class="stat-value">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">ČAS</span>
+            <strong id="timer" class="stat-value">00:00</strong>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="new-game" class="button button-primary" type="button">
+            <span aria-hidden="true">↻</span> Nová hra
+          </button>
+          <button id="restart" class="button button-secondary" type="button">
+            <span aria-hidden="true">⟲</span> Reštartovať
+          </button>
+        </div>
+
+        <div id="game-status" class="status-message" role="status" aria-live="polite">
+          <span class="status-icon" aria-hidden="true">✦</span>
+          <span>Vyber číslo vedľa prázdneho políčka a začni.</span>
+        </div>
+
+        <div class="how-to">
+          <p class="panel-label">AKO HRAŤ</p>
+          <ol>
+            <li>Presúvaj vždy iba číslo susediace s prázdnym miestom.</li>
+            <li>Zoraď čísla od <strong>1 do 15</strong> zľava doprava.</li>
+            <li>Prázdne políčko patrí na koniec.</li>
+          </ol>
+          <div class="keyboard-tip">
+            <span class="keyboard-icon" aria-hidden="true">⌨</span>
+            <span>Hra sa dá ovládať aj šípkami na klávesnici.</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <span>15 Puzzle</span>
+      <span>Urob si chvíľku na premýšľanie.</span>
+    </footer>
+  </main>
+</body>
+</html>
