@@ -21,9 +21,11 @@ Vyžaduje Node.js 18 alebo novší. Spusť `npm test`.
 
 Testy kontrolujú susednosť políčok, platnosť ťahov, zachovanie pôvodného stavu a riešiteľnosť náhodných rozložení.
 
-## GitHub Pages
+## Kontrola a publikovanie
 
-Po zlúčení do `main` môžeš publikovať hru cez **Settings → Pages → Build and deployment → Deploy from a branch** a vybrať `main` s priečinkom `/(root)`. Stránka sa následne bude zobrazovať na adrese `https://javorkahub.github.io/kodicka/`.
+Workflow `.github/workflows/test-and-deploy.yml` automaticky spúšťa `npm test` pri otvorení alebo aktualizácii Pull Requestu do `main`. Po zlúčení do `main` testy prebehnú znova a pri úspechu sa hra nasadí na GitHub Pages.
+
+Pri prvom nasadení môže byť potrebné v **Settings → Pages → Build and deployment** nastaviť **Source: GitHub Actions**. Po úspešnom nasadení bude hra dostupná na adrese `https://javorkahub.github.io/kodicka/` (ak má účet/repozitár povolené GitHub Pages).
 
 ## Súbory
 
